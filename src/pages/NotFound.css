@@ -1,0 +1,13 @@
+.NotFound {
+    background-color: forestgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30vh;
+}
+
+.erro {
+    background-color: aqua;
+    height: 200px;
+}
