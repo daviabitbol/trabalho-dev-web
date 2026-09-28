@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+ul {
+    width: 33%;
+}
