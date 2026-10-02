@@ -2,6 +2,14 @@ h1 {
   color: red;
 }
 
-div {
+.container {
   background-color: black;
+  min-height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: black;
+  min-height: 100%;
 }
