@@ -1,6 +1,27 @@
 .movie-card {
-    width: 33%;
-    height: 15%;
+    max-width: 280px;
+    max-height: 600px;
     border-color: white;
-    background-color: forestgreen;
+    border-width: 2px;
+    border-style: solid;
+    background: #141414;
+    border-radius: 12px;
+}
+
+.movie-card img {
+    margin-top: 20px;
+    width: 70%;
+    height: 180px;
+}
+
+.movie-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+}
+
+.movie-card:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
 }

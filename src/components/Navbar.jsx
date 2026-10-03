@@ -1,13 +1,44 @@
-import { NavLink } from "react-router-dom"
-import "./NavBar.css"
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 export function NavBar() {
-    return (
-        <nav>
-            <NavLink to="/" className={({ isActive }) => isActive ? "link-ativo" : "link"}>Home</NavLink>
-            <NavLink to="/about" className={({ isActive }) => isActive ? "link-ativo" : "link"}>Sobre</NavLink>
-            <NavLink to="/favorites" className={({ isActive }) => isActive ? "link-ativo" : "link"}>Favoritos</NavLink>
-            <NavLink to="/search" className={({ isActive }) => isActive ? "link-ativo" : "link"}>Buscar</NavLink>
-        </nav>
-    )
+  return (
+    <nav>
+      <header>CATÁLOGO DE FILMES</header>
+      <div className="links">
+        <div className="home">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "link-ativo" : "link")}
+          >
+            Home
+          </NavLink>
+        </div>
+        <div className="about">
+            <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "link-ativo" : "link")}
+        >
+          Sobre
+        </NavLink>
+        </div>
+        <div className="favorites">
+            <NavLink
+          to="/favorites"
+          className={({ isActive }) => (isActive ? "link-ativo" : "link")}
+        >
+          Favoritos
+        </NavLink>
+        </div>
+        <div className="search">
+            <NavLink
+          to="/search"
+          className={({ isActive }) => (isActive ? "link-ativo" : "link")}
+        >
+          Buscar
+        </NavLink>
+        </div>
+      </div>
+    </nav>
+  );
 }
