@@ -1,13 +1,20 @@
 .NotFound {
-    background-color: forestgreen;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 30vh;
+    color: rgb(58, 55, 55);
 }
 
-.erro {
-    background-color: aqua;
+.return {
+    color: red
+}
+
+.return:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.error {
     height: 200px;
+    font-size: 20rem;
 }

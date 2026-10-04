@@ -14,14 +14,6 @@ export function NavBar() {
             Home
           </NavLink>
         </div>
-        <div className="about">
-            <NavLink
-          to="/about"
-          className={({ isActive }) => (isActive ? "link-ativo" : "link")}
-        >
-          Sobre
-        </NavLink>
-        </div>
         <div className="favorites">
             <NavLink
           to="/favorites"

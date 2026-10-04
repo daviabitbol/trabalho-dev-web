@@ -1,6 +1,6 @@
 .movie-card {
-    max-width: 280px;
-    max-height: 600px;
+    width: 280px;
+    height: 460px;
     border-color: white;
     border-width: 2px;
     border-style: solid;
@@ -24,4 +24,20 @@
 .movie-card:hover {
     cursor: pointer;
     transform: translateY(-2px);
+    box-shadow: 0 0 70px rgb(56, 55, 55);
+}
+
+.favoritado {
+    background-color: grey;
+    color: rgb(92, 92, 92);
+}
+
+.desfavoritado {
+    background-color: yellow;
+    color: rgb(92, 92, 92);
+}
+
+button {
+    background-color: yellow;
+    border-radius: 10px;
 }

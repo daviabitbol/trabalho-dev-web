@@ -5,7 +5,8 @@ export function Footer() {
     <div className="footer-card">
       <footer>
         <ul>
-          <strong>Quem somos</strong>
+          <strong>Esse site foi desenvolvido por</strong>
+          <p>Davi Rabello Abitbol</p>
         </ul>
         <ul>
           <strong>Saiba mais</strong>
