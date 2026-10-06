@@ -1,12 +1,32 @@
 footer {
     display: flex;
     flex-direction: row;
-    background-color: white;
-    gap: 30px;
-    justify-content: space-between;
+    width: 100%;
 }
 
 ul {
-    width: 33%;
     color: red;
+}
+
+.developed {
+    text-align: center;
+    width: 375px;
+}
+
+.know-more {
+    text-align: center;
+    width: 375px;
+}
+
+.contacts {
+    text-align: center;
+    width: 375px;
+}
+
+.github {
+    color: whitesmoke;
+}
+
+.github:hover {
+    cursor: pointer;
 }

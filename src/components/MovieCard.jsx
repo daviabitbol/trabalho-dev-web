@@ -29,7 +29,7 @@ export function MovieCard({
         <p>released on {release_date}</p>
         <p>avg: {vote_average}</p>
         <p>votes: {vote_count}</p>
-        <button onClick={handleClick} className={({ favoritado }) => (favoritado ? "favoritado" : "desfavoritado")}>{favoritado ? "Desfavoritar" : "Favoritar"}</button>
+        <button onClick={handleClick} className={favoritado ? "favoritado" : "desfavoritado"}>{favoritado ? "Desfavoritar" : "Favoritar"}</button>
       </div>
     </div>
   );

@@ -29,6 +29,7 @@ export function MovieList() {
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}
+            id={movie.id}
             title={movie.title}
             popularity={movie.popularity}
             poster_path={movie.poster_path}

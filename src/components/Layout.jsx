@@ -3,6 +3,7 @@ import "./Layout.css";
 import { NavBar } from "./Navbar";
 import "./Footer";
 import { Footer } from "./Footer";
+import "./Layout.css"
 
 export function Layout() {
   return (
