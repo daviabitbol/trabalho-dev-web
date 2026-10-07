@@ -13,9 +13,19 @@ export function MovieCard({
 }) {
   const navigate = useNavigate()
   const [favoritado, setFavoritado] = useState(false)
+  const filme = {id: id, title: title, popularity: popularity, poster_path: poster_path, release_date: release_date, vote_average: vote_average, vote_count: vote_count}
   function handleClick(e) {
     e.stopPropagation()
-    setFavoritado(!favoritado)
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) ?? [];
+    let novosFavoritos;
+    if (favoritos.includes(id)) {
+      novosFavoritos = favoritos.filter((f) => f !== id)
+      setFavoritado(false)
+    } else {
+      novosFavoritos = [...favoritos, id]
+      setFavoritado(true)
+    }
+    localStorage.setItem("favoritos", JSON.stringify(novosFavoritos))
   }
   return (
     <div className="movie-card" onClick={() => navigate(`/about/${id}`)}>

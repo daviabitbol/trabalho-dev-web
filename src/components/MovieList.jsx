@@ -23,6 +23,12 @@ export function MovieList() {
     fetchMovies();
   }, []);
 
+  if (loading) {
+    return (
+      <h1>Carregando...</h1>
+    )
+  }
+
   return (
     <div>
       <ul className="grid">

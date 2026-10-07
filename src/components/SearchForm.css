@@ -2,4 +2,20 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: red;
+}
+
+form input {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.submit-btn {
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
 }

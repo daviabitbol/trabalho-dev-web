@@ -1,6 +1,6 @@
 .movie-card {
     width: 280px;
-    height: 460px;
+    height: 490px;
     border-color: white;
     border-width: 2px;
     border-style: solid;
@@ -30,14 +30,19 @@
 .favoritado {
     background-color: grey;
     color: rgb(92, 92, 92);
+    height: 30px;
+    border-radius: 12px;
+    width: 100%;
 }
 
 .desfavoritado {
     background-color: yellow;
     color: rgb(92, 92, 92);
+    height: 30px;
+    border-radius: 12px;
+    width: 100%;
 }
 
-button {
-    height: 30px;
-    border-radius: 12PX;
+button:hover {
+    cursor: pointer;
 }

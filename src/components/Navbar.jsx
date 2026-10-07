@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import { GoBackButton } from "./GoBackButton";
 
 export function NavBar() {
   return (
     <nav>
       <header>CATÁLOGO DE FILMES</header>
       <div className="links">
+        <GoBackButton />
         <div className="home">
           <NavLink
             to="/"

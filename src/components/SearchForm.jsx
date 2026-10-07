@@ -61,6 +61,7 @@ export function SearchForm() {
       <h3>Formulário de busca</h3>
       <label htmlFor="title">Titulo</label>
       <input
+      placeholder="Ex: Resident Evil..."
         name="title"
         id="title"
         value={form.title}
@@ -68,17 +69,19 @@ export function SearchForm() {
       />
       <label htmlFor="release_date">Data de lançamento</label>
       <input
+      placeholder="Ex: 01-02-2023"
         name="release_date"
         value={form.release_date}
         onChange={handleChange}
       />
       <label htmlFor="vote_average">Média de votos</label>
       <input
+      placeholder="Ex: 123.456"
         name="vote_average"
         value={form.vote_average}
         onChange={handleChange}
       />
-      <button></button>
+      <button className="submit-btn">Enviar</button>
     </form>
   );
 }
