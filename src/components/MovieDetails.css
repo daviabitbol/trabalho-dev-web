@@ -1,0 +1,39 @@
+.alignement-div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-details-card {
+    width: 80%;
+    height: 1200px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    background: #141414;
+    border-radius: 12px;
+    color: red;
+    box-shadow: 0 0 70px rgb(56, 55, 55);
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.5rem;
+    max-width: 90%;
+}
+
+.movie-details-card img {
+    margin-top: 5%;
+    height: 50%;
+    width: 80%;
+}

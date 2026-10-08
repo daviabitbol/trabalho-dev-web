@@ -5,3 +5,7 @@
     color: black;
     background-color: red;
 }
+
+.go-back:hover {
+    color: white;
+}

@@ -1,5 +1,7 @@
+import { MovieDetails } from "../components/MovieDetails";
+
 export function About() {
     return (
-        <h1>Detalhes de um filme</h1>
+        <MovieDetails />
     )
 }
