@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Search.css";
-import { MovieCard } from "../components/MovieCard"
+import { MovieCard } from "../components/MovieCard";
 export function Search() {
   const [form, setForm] = useState({ title: "" });
   const [loading, setLoading] = useState(false);
@@ -55,22 +55,18 @@ export function Search() {
         </button>
       </form>
       <div className="grid">
-        {movies.length ? (
-          movies.map((movie) => (
-            <MovieCard
-              key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              popularity={movie.popularity}
-              poster_path={movie.poster_path}
-              release_date={movie.release_date}
-              vote_average={movie.vote_average}
-              vote_count={movie.vote_count}
-            />
-          ))
-        ) : (
-          <p className="not-found">Não foi possível encontrar um filme que possua esse título</p>
-        )}
+        {movies.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            popularity={movie.popularity}
+            poster_path={movie.poster_path}
+            release_date={movie.release_date}
+            vote_average={movie.vote_average}
+            vote_count={movie.vote_count}
+          />
+        ))}
       </div>
     </div>
   );
