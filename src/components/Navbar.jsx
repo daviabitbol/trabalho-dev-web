@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import "./NavBar.css";
-import { GoBackButton } from "./GoBackButton";
 
 export function NavBar() {
+  const navigate = useNavigate()
   return (
     <nav>
       <header>CATÁLOGO DE FILMES</header>
       <div className="links">
-        <GoBackButton />
+        <button className="go-back" onClick={() => navigate(-1)}>Voltar</button>
         <div className="home">
           <NavLink
             to="/"

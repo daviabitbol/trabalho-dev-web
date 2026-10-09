@@ -55,3 +55,15 @@ header {
 .search {
     width: 25%;
 }
+
+.go-back {
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    background-color: red;
+}
+
+.go-back:hover {
+    color: white;
+}
