@@ -1,3 +1,9 @@
-footer {
-    align-self: baseline;
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout footer {
+    margin-top: auto;
 }

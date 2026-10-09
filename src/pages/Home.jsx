@@ -5,7 +5,7 @@ import "./Home.css";
 export function Home() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [erro, setErro] = useState(null)
+  const [erro, setErro] = useState(null);
 
   useEffect(() => {
     async function fetchMovies() {
@@ -16,7 +16,7 @@ export function Home() {
         const data = await res.json();
         setMovies(data.results);
       } catch (err) {
-        setErro(err)
+        setErro(err);
       } finally {
         setLoading(false);
       }
@@ -24,17 +24,9 @@ export function Home() {
     fetchMovies();
   }, []);
 
-  if (loading) {
-    return (
-      <h1>Carregando...</h1>
-    )
-  }
+  if (loading) return <h1>Carregando...</h1>;
 
-  if (erro) {
-    return (
-      <h1>Erro: {erro}</h1>
-    )
-  }
+  if (erro) return <h1>Erro: {erro}</h1>;
 
   return (
     <div>
