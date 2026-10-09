@@ -1,0 +1,15 @@
+.grid {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    justify-items: center;
+}
+
+.empty {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: red;
+    font-size: 3rem;
+}

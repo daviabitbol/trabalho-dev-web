@@ -31,4 +31,9 @@ form input {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 100px;
     justify-items: center;
+    align-items: center;
+}
+
+.not-found {
+    align-content: center;
 }

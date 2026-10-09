@@ -69,7 +69,7 @@ export function SearchForm() {
             />
           ))
         ) : (
-          <p>Não foi possível encontrar um filme que possua esse título</p>
+          <p className="not-found">Não foi possível encontrar um filme que possua esse título</p>
         )}
       </div>
     </div>

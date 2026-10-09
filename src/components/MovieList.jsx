@@ -5,6 +5,7 @@ import "./MovieList.css";
 export function MovieList() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [erro, setErro] = useState(null)
 
   useEffect(() => {
     async function fetchMovies() {
@@ -15,7 +16,7 @@ export function MovieList() {
         const data = await res.json();
         setMovies(data.results);
       } catch (err) {
-        console.log(err);
+        setErro(err)
       } finally {
         setLoading(false);
       }
@@ -26,6 +27,12 @@ export function MovieList() {
   if (loading) {
     return (
       <h1>Carregando...</h1>
+    )
+  }
+
+  if (erro) {
+    return (
+      <h1>Erro: {erro}</h1>
     )
   }
 

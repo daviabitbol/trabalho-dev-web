@@ -11,21 +11,27 @@ export function MovieCard({
   vote_average,
   vote_count,
 }) {
-  const navigate = useNavigate()
-  const [favoritado, setFavoritado] = useState(false)
-  const filme = {id: id, title: title, popularity: popularity, poster_path: poster_path, release_date: release_date, vote_average: vote_average, vote_count: vote_count}
-  function handleClick(e) {
-    e.stopPropagation()
-    let favoritos = JSON.parse(localStorage.getItem("favoritos")) ?? [];
-    let novosFavoritos;
-    if (favoritos.includes(id)) {
-      novosFavoritos = favoritos.filter((f) => f !== id)
-      setFavoritado(false)
-    } else {
-      novosFavoritos = [...favoritos, id]
-      setFavoritado(true)
+  function getFavoritos() {
+    try {
+      const dados = JSON.parse(localStorage.getItem("favoritos"));
+      return Array.isArray(dados) ? dados : [];
+    } catch {
+      return [];
     }
-    localStorage.setItem("favoritos", JSON.stringify(novosFavoritos))
+  }
+
+  const navigate = useNavigate();
+  const [favoritado, setFavoritado] = useState(() =>
+    JSON.parse(getFavoritos().includes(id))
+  );
+  function handleClick(e) {
+    e.stopPropagation();
+    const favoritos = getFavoritos();
+    const novosFavoritos = favoritos.includes(id)
+      ? favoritos.filter((f) => f !== id)
+      : [...favoritos, id];
+    localStorage.setItem("favoritos", JSON.stringify(novosFavoritos));
+    setFavoritado(novosFavoritos.includes(id));
   }
   return (
     <div className="movie-card" onClick={() => navigate(`/about/${id}`)}>
@@ -39,7 +45,13 @@ export function MovieCard({
         <p>released on {release_date}</p>
         <p>avg: {vote_average}</p>
         <p>votes: {vote_count}</p>
-        <button onClick={handleClick} className={favoritado ? "favoritado" : "desfavoritado"}>{favoritado ? "Desfavoritar" : "Favoritar"}</button>
+        <button
+          type="button"
+          onClick={handleClick}
+          className={favoritado ? "favoritado" : "desfavoritado"}
+        >
+          {favoritado ? "Desfavoritar" : "Favoritar"}
+        </button>
       </div>
     </div>
   );
